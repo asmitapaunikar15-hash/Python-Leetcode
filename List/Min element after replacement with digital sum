@@ -1,1 +1,20 @@
+class Solution(object):
+    def minElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """        
+        sums=[]
+        for i in nums:
+            sum=0
+            while(i>0):
+                sum+=i%10
+                i//=10
 
+            sums.append(sum)
+        print(sums)
+        return min(sums)
+                
+
+    
+        
